@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      GIT_CI_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
       GIT_HEAD_COMMIT_MESSAGE: ${{toJSON(github)}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
